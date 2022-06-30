@@ -1,0 +1,54 @@
+view all databases
+show dbs
+
+create a new or switch databases
+use dbName
+
+view current database
+db
+
+Delete database
+db.dropDatabase()
+
+Show Collections
+show Collections
+
+create a collection name 'comments'
+db.createCollection('comments')
+
+command to drop a collection
+db.<collection name>.drop()
+
+MongoDb commands for Rows
+Insert One Rows
+db.content.insert({'title':'My Third Post','content' : 'this is my third post'}) 
+
+Insert Many Rows
+db.content.insertMany(
+    [
+        {'title':'My Forth Post','content' : 'this is my forth post'}
+        ,{'title':'My Fifth Post','content' : 'this is my fifth post'}
+    ]) 
+
+Show all rows in a collection
+db.content.find()
+db.content.findOne({title : 'My Fifth Post'})  // find the first match record
+db.content.find().pretty() // prettified way
+
+
+Search in a mongo db database
+db.content.find({title : 'My Fifth Post'})  // search via any key
+
+// chaining of function
+db.content.find({title : 'My Fifth Post'}).pretty() 
+
+// limit the number of rows in output
+db.content.find().pretty().limit(2)  
+
+// count won't skip 
+db.content.find().limit(2).count() 
+
+// sort the data on the basis of field
+db.content.find().sort({title : -1}) 
+
+
