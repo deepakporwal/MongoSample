@@ -1,3 +1,5 @@
+****************** List of all commands prepaired by me *********************
+
 view all databases
 show dbs
 
